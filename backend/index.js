@@ -29,6 +29,10 @@ mongoose.connect(process.env.MONGODB_URI)
   .catch((err) => console.error('Database connection error:', err));
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Clinical Server running on port ${PORT}`);
-});
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`Clinical Server running on port ${PORT}`);
+  });
+}
+
+module.exports = app;
