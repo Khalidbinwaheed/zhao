@@ -1,0 +1,27 @@
+# Dependencies
+**/node_modules
+**/package-lock.json
+
+# Next.js
+frontend/.next/
+frontend/out/
+
+# Environment
+**/.env
+**/.env.local
+**/.env.*.local
+
+# Build
+**/dist
+**/build
+
+# System
+.DS_Store
+Thumbs.db
+
+# Misc
+frontend/.next/
+frontend/out/
+backend/scripts/node_modules/
+**/temp
+**/tmp
